@@ -61,6 +61,7 @@ class AlbumDetailPreviewViewController: UIViewController, UICollectionViewDataSo
         self.chosenPhotoView?.frame = CGRect.init(x: 0, y: self.view.frame.size.height - chosenPhotoViewHeight, width: self.view.frame.size.width, height: chosenPhotoViewHeight)
         self.chosenPhotoView?.delegate = self
         self.chosenPhotoView?.sendButtonClickedClosure = {
+            DDLog("图片信息保存在ChosenPhotosModule.sharedInstance.chosenPhotoArray")
             DDLog("在这里配置你的发送相片操作")
             _ = self.navigationController?.popToViewController((self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 4])!, animated: true)   // 返回上上上层
         }
